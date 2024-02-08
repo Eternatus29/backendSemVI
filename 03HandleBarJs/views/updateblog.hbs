@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./blogpage.css" />
+    <title>HandleBar JS</title>
+</head>
+
+<body>
+    <h1>Update Page</h1>
+    <form action="updateblogs" method="POST">
+        <label for="author">Author</label>
+        <input name="author" id="author" value="{{updateblog.author}}"/>
+        <label for="category">Category</label>
+        <input name="category" id="category" value="{{updateblog.category}}" />
+        <label for="blog">Blog</label>
+        <textarea name="blog" id="blog" cols="10" rows="10">{{updateblog.blog}}</textarea>
+        <input type="hidden" name="blogId" id="blogId" value="{{updateblog.blogId}}" />
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>

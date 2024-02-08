@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./blogpage.css" />
+    <title>BlogPage</title>
+</head>
+
+<body>
+    {{> navbar}}
+    <h1>Blog Page</h1>
+    <ul class="blog">
+        {{#each blogarr}}
+            <li>UID : {{this.blogId}}</li>
+            <li>AUTHOR NAME : {{this.author}}</li>
+            <li>CATEGORY : {{this.category}}</li>
+            <li>BLOG : {{this.blog}}</li>
+            <button><a href="/delete/{{this.blogId}}">Delete Blog</a></button> 
+            <button><a href="/update/{{this.blogId}}">Update Blogs</a></button>
+            {{!-- when anchor tag is used data is sent using get method --}}
+        {{/each}}
+    </ul>
+</body>
+</html>
